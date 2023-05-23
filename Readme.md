@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ivan Filippov](https://up.htmlacademy.ru/htmlcss/37/user/2266613).
-* Наставник: `Неизвестно`.
+* Наставник: [Vladyslav Yermolayev](https://up.htmlacademy.ru/htmlcss/37/user/128353).
 
 ---
 
