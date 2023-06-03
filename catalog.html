@@ -55,7 +55,8 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html"><span
               class="visually-hidden"></span></a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link">Гостиницы</a></li>
+        <!-- тут снизу была ссылка, но у нее убирал href, чтобы она не была активной, но исправил на другой тэг после вашего комментария -->
+        <li class="breadcrumbs__item"><span class="breadcrumbs__link">Гостиницы</span></li>
       </ul>
       <fieldset class="filter__group">
         <legend class="filter__group-title">Инфраструктура:</legend>
@@ -98,8 +99,8 @@
           <input class="filter__price-slider-input" type="number" placeholder="до" value="9000">
         </label>
         <!-- Пока не рассказывалось как делать элемент с бегунком -->
-        <button class="filter__button-apply button" type="button">Применить</button>
-        <button class="filter__button-reset button" type="button">Сбросить</button>
+        <button class="filter__button-apply button" type="submit">Применить</button>
+        <button class="filter__button-reset button" type="reset">Сбросить</button>
       </fieldset>
     </section>
 
