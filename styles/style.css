@@ -61,12 +61,6 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.inner-wrapper {
-  width: 1060px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -81,8 +75,15 @@ body {
 /* Header */
 
 .main-header {
+  z-index: 1;
   display: flex;
+  margin-bottom: -6px;
+  padding-right: 70px;
   padding-left: 70px;
+}
+
+.main-header__logo {
+  margin-right: 44px;
 }
 
 
@@ -94,7 +95,6 @@ body {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  padding-left: 30px;
 }
 
 .navigation__list,
@@ -122,8 +122,7 @@ body {
 
 .navigation__link {
   display: block;
-
-  padding: 20px 0;
+  padding: 19px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -137,14 +136,19 @@ body {
 
 .navigation__buttons-list {
   display: flex;
-  justify-content: space-between;
   width: 268px;
-  margin-right: 70px;
 }
 
 .navigation__buttons-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 64px;
+}
+
+.navigation__buttons-item:nth-child(2) {
+  margin-right: 20px;
 }
 
 .navigation__buttons-item:first-child .navigation__buttons-link {
@@ -153,10 +157,11 @@ body {
   align-items: center;
   width: 20px;
   height: 20px;
-  padding: 22px 12px;
+  padding: 32px 16px;
   background-image: url("../images/header/header-search-icon.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  background-position: center;
 }
 
 .navigation__buttons-item:nth-child(2) .navigation__buttons-link {
@@ -164,14 +169,16 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  padding: 22px 12px;
+  padding: 32px 16px;
   background-image: url("../images/header/header-favorites-icon.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  background-position: center;
 }
 
 .navigation__favorites-amount {
   position: absolute;
+  top: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,14 +193,19 @@ body {
 }
 
 .navigation__buttons-item:last-child {
+  align-self: center;
   width: 160px;
-  min-height: 36px;
-
+  height: 36px;
+  margin-bottom: 6px;
   background: #756157;
   border-radius: 4px;
 }
 
-.navigation__buttons-link_flex {
+.navigation__buttons-button {
+  font-weight: 700;
+}
+
+/* .navigation__buttons-link_flex {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -210,7 +222,7 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   color: #FFFFFF;
-}
+} */
 
 /* index.html */
 /* Hero */
@@ -218,6 +230,7 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
+  min-height: 485px;
   padding: 51px;
   background-image: url("../images/hero-section/hero-divinder.svg"), url("../images/hero-section/hero-bg.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -227,7 +240,7 @@ body {
 
 .hero__img-title-part-1 {
   margin: 0 auto;
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 }
 
 .hero__img-title-part-2 {
@@ -237,13 +250,13 @@ body {
 
 .hero__img-title-part-3 {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
 }
 
 /* Welcome */
 
 .welcome {
-  padding: 69px 0 90px 0;
+  padding: 68px 0 90px 0;
 }
 
 .welcome__title {
@@ -586,7 +599,7 @@ body {
 /* Filter */
 
 .filter {
-  padding: 35px 0 70px;
+  padding: 35px 70px 70px;
   background-image: url("../images/catalog/catalog-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover 100%;
@@ -695,7 +708,9 @@ body {
 
 .catalog {
   padding-top: 50px;
+  padding-right: 70px;
   padding-bottom: 60px;
+  padding-left: 70px;
 }
 
 .catalog_visual-settings-wrapper,
@@ -730,6 +745,24 @@ body {
   display: flex;
 }
 
+.catalog__theme-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.catalog__theme-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.catalog__theme-item_active {
+  border-color: #000000;
+}
+
 .catalog-tile-style-icon,
 .catalog-full-screen-style-icon,
 .catalog-list-style-icon {
@@ -748,6 +781,8 @@ body {
 }
 
 .catalog__card-item {
+  display: flex;
+  flex-direction: column;
   width: 340px;
   padding: 20px;
   border: 1px solid #E6E6E6;
@@ -756,6 +791,7 @@ body {
 
 .card__img-link {
   display: block;
+  order: -1;
   min-width: 300px;
   margin-bottom: 16px;
 }

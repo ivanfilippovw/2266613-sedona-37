@@ -38,13 +38,14 @@
             </li>
             <li class="navigation__buttons-item">
               <a class="navigation__buttons-link" href="#">
-                <span class="visually-hidden">Избранное</span><b>12</b>
+                <span class="visually-hidden">Избранное</span><b class="navigation__favorites-amount">12</b>
               </a>
             </li>
             <li class="navigation__buttons-item">
-              <a class="navigation__buttons-link navigation__buttons-link_flex">
+              <!-- <a class="navigation__buttons-link navigation__buttons-link_flex">
                 <span class="navigation__buttons-link-text">Хочу сюда!</span>
-              </a>
+              </a> -->
+              <button class="button navigation__buttons-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
@@ -130,7 +131,7 @@
                   <option class="catalog__sorting-item" value="expensive">Сначала дорогие</option>
                 </select>
                 <ul class="catalog__theme-list">
-                  <li class="catalog__theme-item">
+                  <li class="catalog__theme-item catalog__theme-item_active">
                     <a class="catalog__theme-link" href="#">
                       <span class="visually-hidden">Показать небольшие карточки</span>
                       <svg class="catalog-tile-style-icon">
@@ -160,12 +161,12 @@
 
             <ul class="catalog__card-list">
               <li class="catalog__card-item card">
+                <a class="card__title-link" href="#">
+                  <h3 class="card__title">Amara Resort & Spa</h3>
+                </a>
                 <a class="card__img-link" href="#">
                   <img class="card__img" src="./images/catalog/catalog-hotel-1.jpg" width="300" height="212"
                     alt="Вид на звездное небо между двух скал.">
-                </a>
-                <a class="card__title-link" href="#">
-                  <h3 class="card__title">Amara Resort & Spa</h3>
                 </a>
                 <div class="card_wrapper-space-between">
                   <span class="card__text">Гостиница</span>
@@ -188,12 +189,12 @@
               </li>
 
               <li class="catalog__card-item card">
+                <a class="card__title-link" href="#">
+                  <h3 class="card__title">Villas at Poco Diablo</h3>
+                </a>
                 <a class="card__img-link" href="#">
                   <img class="card__img" src="./images/catalog/catalog-hotel-2.jpg" width="300" height="212"
                     alt="Вид на мощные и массивные горы, скалу Белл-Рок под пасмурным небом и с радугой.">
-                </a>
-                <a class="card__title-link" href="#">
-                  <h3 class="card__title">Villas at Poco Diablo</h3>
                 </a>
                 <div class="card_wrapper-space-between">
                   <span class="card__text">Гостиница</span>
@@ -216,12 +217,12 @@
               </li>
 
               <li class="catalog__card-item card">
+                <a class="card__title-link" href="#">
+                  <h3 class="card__title">Desert Quail Inn</h3>
+                </a>
                 <a class="card__img-link" href="#">
                   <img class="card__img" src="./images/catalog/catalog-hotel-3.jpg" width="300" height="212"
                     alt="Вид на скалу Белл-Рок в дневное время.">
-                </a>
-                <a class="card__title-link" href="#">
-                  <h3 class="card__title">Desert Quail Inn</h3>
                 </a>
                 <div class="card_wrapper-space-between">
                   <span class="card__text">Гостиница</span>
@@ -244,12 +245,12 @@
               </li>
 
               <li class="catalog__card-item card">
+                <a class="card__title-link" href="#">
+                  <h3 class="card__title">GreenTree Inn</h3>
+                </a>
                 <a class="card__img-link" href="#">
                   <img class="card__img" src="./images/catalog/catalog-hotel-4.jpg" width="300" height="212"
                     alt="Вид на скалу Белл-Рок и звездное небо в ночное время.">
-                </a>
-                <a class="card__title-link" href="#">
-                  <h3 class="card__title">GreenTree Inn</h3>
                 </a>
                 <div class="card_wrapper-space-between">
                   <span class="card__text">Гостиница</span>
