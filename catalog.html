@@ -129,10 +129,10 @@
                   <option class="catalog__sorting-item" value="expensive">Сначала дорогие</option>
                 </select>
                 <ul class="catalog__theme-list">
-                  <li class="catalog__theme-item catalog__theme-item_active">
-                    <a class="catalog__theme-link" href="#">
+                  <li class="catalog__theme-item">
+                    <a class="catalog__theme-link catalog__theme-link_active" href="#">
                       <span class="visually-hidden">Показать небольшие карточки</span>
-                      <svg class="catalog-tile-style-icon">
+                      <svg class="catalog-tile-style-icon" aria-hidden="true" focusable="false">
                         <use xlink:href="./images/catalog/catalog-style-sprite.svg#catalog-tile-style"></use>
                       </svg>
                     </a>
@@ -140,7 +140,7 @@
                   <li class="catalog__theme-item">
                     <a class="catalog__theme-link" href="#">
                       <span class="visually-hidden">Показать большие карточки</span>
-                      <svg class="catalog-full-screen-style-icon">
+                      <svg class="catalog-full-screen-style-icon" aria-hidden="true" focusable="false">
                         <use xlink:href="./images/catalog/catalog-style-sprite.svg#catalog-full-screen-style"></use>
                       </svg>
                     </a>
@@ -148,7 +148,7 @@
                   <li class="catalog__theme-item">
                     <a class="catalog__theme-link" href="#">
                       <span class="visually-hidden">Показать список</span>
-                      <svg class="catalog-list-style-icon">
+                      <svg class="catalog-list-style-icon" aria-hidden="true" focusable="false">
                         <use xlink:href="./images/catalog/catalog-style-sprite.svg#catalog-list-style"></use>
                       </svg>
                     </a>
@@ -168,7 +168,7 @@
                 </a>
                 <span class="card__text">Гостиница</span>
                 <span class="card__price">От <span class="card__price-number">4000</span> ₽</span>
-                <a class="card__link" href="#">Подробнее</a>
+                <a class="button card__link" href="#">Подробнее</a>
                 <button class="button card__button" type="button">В избранное</button>
                 <ul class="card__stars-list">
                   <li class="card__star"></li>
@@ -190,8 +190,8 @@
                 </a>
                 <span class="card__text">Гостиница</span>
                 <span class="card__price">От <span class="card__price-number">5000</span> ₽</span>
-                <a class="card__link" href="#">Подробнее</a>
-                <button class="button card__button" type="button">В избранное</button>
+                <a class="button card__link" href="#">Подробнее</a>
+                <button class="button card__button card__button_active" type="button">В избранном</button>
                 <ul class="card__stars-list">
                   <li class="card__star"></li>
                   <li class="card__star"></li>
@@ -211,7 +211,7 @@
                 </a>
                 <span class="card__text">Гостиница</span>
                 <span class="card__price">От <span class="card__price-number">2500</span> ₽</span>
-                <a class="card__link" href="#">Подробнее</a>
+                <a class="button card__link" href="#">Подробнее</a>
                 <button class="button card__button" type="button">В избранное</button>
                 <ul class="card__stars-list">
                   <li class="card__star"></li>
@@ -232,7 +232,7 @@
                 </a>
                 <span class="card__text">Гостиница</span>
                 <span class="card__price">От <span class="card__price-number">1500</span> ₽</span>
-                <a class="card__link" href="#">Подробнее</a>
+                <a class="button card__link" href="#">Подробнее</a>
                 <button class="button card__button" type="button">В избранное</button>
                 <ul class="card__stars-list">
                   <li class="card__star"></li>
@@ -245,12 +245,24 @@
               </li>
             </ul>
             <ul class="catalog__pagination pagination">
-              <li class="pagination__item"><a class="pagination__link pagination__link_current">1</a></li>
-              <li class="pagination__item"><a class="pagination__link">2</a></li>
-              <li class="pagination__item"><a class="pagination__link">3</a></li>
-              <li class="pagination__item"><a class="pagination__link">4</a></li>
-              <li class="pagination__item"><a class="pagination__link pagination__link_others">...</a></li>
-              <li class="pagination__item"><a class="pagination__link">10</a></li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link_current" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link_others">...</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">10</a>
+              </li>
             </ul>
           </div>
         </section>
@@ -277,22 +289,22 @@
           <li class="footer__item">
             <a class="footer__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Перейти в Vkontakte.</span>
-              <svg class="footer-vk-icon">
-                <use xlink:href="./images/footer/sprite.svg#footer-vk-icon"></use>
+              <svg class="footer-vk-icon" aria-hidden="true" focusable="false">
+                <use xlink:href="./images/footer/sprite.svg#footer-vk-icon" fill="none"></use>
               </svg>
             </a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="https://t.me/htmlacademy ">
               <span class="visually-hidden">Перейти в Telegram.</span>
-              <svg class="footer-telegram-icon">
+              <svg class="footer-telegram-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="./images/footer/sprite.svg#footer-telegram-icon"></use>
               </svg>
             </a>
           </li>
           <li class="footer__item"><a class="footer__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Перейти в Youtube.</span>
-              <svg class="footer-youtube-icon">
+              <svg class="footer-youtube-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="./images/footer/sprite.svg#footer-youtube-icon"></use>
               </svg>
             </a>
