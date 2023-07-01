@@ -205,8 +205,12 @@
         </ul>
         <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer__logo" href="https://htmlacademy.ru/">
-          <img class="footer__logo-img" src="./images/footer/footer-htmlacademy-logo.svg" width="115" height="33"
-            alt="Логотип сайта html academy." loading="lazy">
+          <span class="visually-hidden">Перейти на сайт HTML Academy.</span>
+          <svg class="footer__logo-img">
+            <use xlink:href="./images/footer/sprite.svg#footer-htmlacademy-logo"></use>
+          </svg>
+          <!-- <img class="footer__logo-img" src="./images/footer/footer-htmlacademy-logo.svg" width="115" height="33"
+            alt="Логотип сайта html academy." loading="lazy"> -->
         </a>
       </footer>
     </div>

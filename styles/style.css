@@ -591,7 +591,7 @@ body {
 
 .footer__list {
   display: flex;
-  margin-right: 14px;
+  margin-right: 11px;
 }
 
 .footer__item:not(:last-child) {
@@ -612,29 +612,31 @@ body {
 .footer-vk-icon {
   width: 25px;
   height: 14px;
+  fill: #83B3D3;
 }
 
 .footer-telegram-icon {
   width: 19px;
   height: 16px;
+  fill: #83B3D3;
 }
 
 .footer-youtube-icon {
   width: 23px;
   height: 18px;
+  fill: #83B3D3;
 }
 
-/* .footer__link:hover {
-  background-color: #68A2CA;
-} */
-
-/* fill="none" */
-
-/* fill="#83B3D3" */
-/* fill-rule="evenodd" */
-
-.footer__link:hover path {
+.footer-vk-icon:hover,
+.footer-telegram-icon:hover,
+.footer-youtube-icon:hover {
   fill: #68A2CA;
+}
+
+.footer-vk-icon:active,
+.footer-telegram-icon:active,
+.footer-youtube-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer__phone {
@@ -644,18 +646,29 @@ body {
   text-decoration: none;
 }
 
-.footer__phone:hover,
-.footer__phone:focus {
-  color: #756157;
-}
-
-.footer__phone:active {
-  color: rgba(117, 97, 87, 0.30);
-}
-
 .footer__logo {
   display: block;
   margin-top: 3px;
+}
+
+.footer__logo-img {
+  width: 115px;
+  height: 33px;
+  fill: #000000;
+}
+
+.footer__phone:hover,
+.footer__phone:focus,
+.footer__logo-img:hover,
+.footer__logo-img:focus {
+  color: #756157;
+  fill: #756157;
+}
+
+.footer__phone:active,
+.footer__logo-img:active  {
+  color: rgba(117, 97, 87, 0.30);
+  fill: rgba(117, 97, 87, 0.30);
 }
 
 /* catalog.html */
