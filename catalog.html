@@ -65,21 +65,33 @@
             <li class="breadcrumbs__item"><span class="breadcrumbs__link-text">Гостиницы</span></li>
           </ul>
 
-          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="GET">
+          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+
             <fieldset class="filter__group">
               <legend class="filter__group-title">Инфраструктура:</legend>
-              <label class="filter__group-control">
-                <input class="filter__group-control-input" type="checkbox" name="pool" checked>
-                Бассейн
-              </label>
-              <label class="filter__group-control">
-                <input class="filter__group-control-input" type="checkbox" name="parking" checked>
-                Парковка
-              </label>
-              <label class="filter__group-control">
-                <input class="filter__group__control-input" type="checkbox" name="wi-fi">
-                Wi-Fi
-              </label>
+              <ul class="filter__group-list">
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group-control-input" type="checkbox" name="pool" checked>
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Бассейн</span>
+                  </label>
+                </li>
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group-control-input" type="checkbox" name="parking" checked>
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Парковка</span>
+                  </label>
+                </li>
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group__control-input" type="checkbox" name="wi-fi">
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="filter__group">
@@ -100,18 +112,33 @@
 
             <fieldset class="filter__price-slider">
               <legend class="filter__price-slider-title">Стоимость, ₽:</legend>
-              <label class="filter__price-slider-label">
-                <input class="filter__price-slider-input" type="number" placeholder="от" value="0">
-              </label>
-              <label class="filter__price-slider-label">
-                <input class="filter__price-slider-input" type="number" placeholder="до" value="9000">
-              </label>
+              <div class="range">
+                <div class="range__inputs-wrapper">
+                  <label class="filter__price-slider-label">
+                    <input class="filter__price-slider-input" type="number" placeholder="от" value="0">
+                  </label>
+                  <label class="filter__price-slider-label">
+                    <input class="filter__price-slider-input" type="number" placeholder="до" value="9000">
+                  </label>
+                </div>
+                <div class="range__scale">
+                  <div class="range__bar" style="right:65px; width:226px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </fieldset>
-            <!-- Пока не рассказывалось как делать элемент с бегунком -->
+
             <div class="filter__buttons-wrapper">
               <button class="filter__button-apply button" type="submit">Применить</button>
               <button class="filter__button-reset button" type="reset">Сбросить</button>
             </div>
+
           </form>
         </section>
 
