@@ -902,6 +902,16 @@ body {
   border: none;
 }
 
+.filter__price-slider-input::-webkit-outer-spin-button,
+.filter__price-slider-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter__price-slider-input[type="number"] {
+  appearance: textfield;
+}
+
 .range {
   display: flex;
   flex-direction: column;
@@ -1041,9 +1051,6 @@ body {
   background-position: right 20px center;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none; */
   appearance: none;
 }
 
@@ -1514,6 +1521,16 @@ body {
 
 .modal__amount-input:hover {
   background-color: #E6E6E6;
+}
+
+.modal__amount-input::-webkit-outer-spin-button,
+.modal__amount-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal__amount-input[type="number"] {
+  appearance: textfield;
 }
 
 .modal__button-find {
