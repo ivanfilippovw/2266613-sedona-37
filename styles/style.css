@@ -70,7 +70,7 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   color:#FFFFFF;
-  background: #756157;
+  background-color: #756157;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -78,12 +78,18 @@ body {
 
 .button:hover,
 .button:focus {
-  background: #615048;
+  background-color: #615048;
 }
 
 .button:active,
 .card__link:active {
   color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+  ;
 }
 
 /* Header */
@@ -98,6 +104,14 @@ body {
 
 .main-header__logo {
   margin-right: 44px;
+}
+
+.main-header__logo:hover {
+  opacity: 0.6;
+}
+
+.main-header__logo:active {
+  opacity: 0.3;
 }
 
 
@@ -143,6 +157,14 @@ body {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.navigation__link:hover {
+  opacity: .6;
+}
+
+.navigation__link:active {
+  opacity: .3;
 }
 
 .navigation__link_active {
@@ -219,6 +241,14 @@ body {
   height: 36px;
   background: #756157;
   border-radius: 4px;
+}
+
+.navigation__buttons-link:hover {
+  opacity: .6;
+}
+
+.navigation__buttons-link:active {
+  opacity: .3;
 }
 
 .navigation__buttons-button {
@@ -551,6 +581,7 @@ body {
 .subscription__input {
   width: 452px;
   padding: 14px 20px;
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   border: none;
@@ -559,6 +590,19 @@ body {
 
 .subscription__input_color {
   background: #F2F2F2;
+}
+
+.subscription__input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.subscription__input:hover {
+  background-color: #E6E6E6;
+}
+
+.subscription__input:focus {
+  background-color: #E6E6E6;
 }
 
 .subscription__button {
@@ -574,6 +618,10 @@ body {
 .subscription__button:hover,
 .subscription__button:focus {
   background-color: #68A2CA;
+}
+
+.subscription__button:active {
+  background-color: #82B3D3;
 }
 
 /* Footer */
@@ -621,15 +669,21 @@ body {
   fill: #83B3D3;
 }
 
-.footer-vk-icon:hover,
-.footer-telegram-icon:hover,
-.footer-youtube-icon:hover {
+.footer__link:hover .footer-vk-icon,
+.footer__link:hover .footer-telegram-icon,
+.footer__link:hover .footer-youtube-icon  {
   fill: #68A2CA;
 }
 
-.footer-vk-icon:active,
-.footer-telegram-icon:active,
-.footer-youtube-icon:active {
+.footer__link:focus .footer-vk-icon,
+.footer__link:focus .footer-telegram-icon,
+.footer__link:focus .footer-youtube-icon {
+  fill: #68A2CA;
+}
+
+.footer__link:active .footer-vk-icon,
+.footer__link:active .footer-telegram-icon,
+.footer__link:active .footer-youtube-icon {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -638,6 +692,15 @@ body {
   line-height: 40px;
   color:#000000;
   text-decoration: none;
+}
+
+.footer__phone:hover,
+.footer__phone:focus {
+  color: #756157;
+}
+
+.footer__phone:active  {
+  color: rgba(117, 97, 87, 0.30);
 }
 
 .footer__logo {
@@ -651,17 +714,15 @@ body {
   fill: #000000;
 }
 
-.footer__phone:hover,
-.footer__phone:focus,
-.footer__logo-img:hover,
-.footer__logo-img:focus {
-  color: #756157;
+.footer__logo:hover .footer__logo-img {
   fill: #756157;
 }
 
-.footer__phone:active,
-.footer__logo-img:active  {
-  color: rgba(117, 97, 87, 0.30);
+.footer__logo:focus .footer__logo-img {
+  fill: #756157;
+}
+
+.footer__logo:active .footer__logo-img {
   fill: rgba(117, 97, 87, 0.30);
 }
 
@@ -707,6 +768,14 @@ body {
   background-image: url("../images/catalog/catalog-breadcrumbs-home-icon.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.breadcrumbs__link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs__link:active {
+  opacity: 0.3;
 }
 
 .breadcrumbs__link-text {
@@ -770,6 +839,11 @@ body {
 
 .filter__group-control:hover {
   opacity: 0.6;
+}
+
+.filter__group-control-input:focus .filter__group-control-mark {
+  outline: 3px solid #83B3D3;
+  outline-offset: 10px;
 }
 
 .filter__group-control:active {
@@ -1228,6 +1302,14 @@ body {
   cursor: pointer;
 }
 
+.modal__button-close:hover {
+  opacity: 0.6;
+}
+
+.modal__button-close:active {
+  opacity: 0.3;
+}
+
 .modal__button-cross {
   position: absolute;
   top: 50%;
@@ -1241,18 +1323,17 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 14px;
+  width: 19px;
   height: 2px;
   background-color: #000000;
-  transform: translate(-50%, -50%);
 }
 
 .modal__button-cross:before {
-  transform: rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal__button-cross:after {
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .modal__list,
@@ -1331,7 +1412,8 @@ body {
 
 .modal__amount-list {
   display: flex;
-  gap: 87px;
+  justify-content: space-between;
+  width: 577px;
 }
 
 .modal__amount-item {
@@ -1357,10 +1439,6 @@ body {
   cursor: pointer;
 }
 
-/* .modal__amount-button:hover {
-  background-color: rgba(117, 97, 87, 1);
-} */
-
 .modal__button-minus::after {
   content: '';
   top: 50%;
@@ -1373,9 +1451,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* .modal__button-minus::after {
+.modal__button-minus:hover::after {
   background-color: rgba(117, 97, 87, 1);
-} */
+}
+
+.modal__button-minus:focus::after {
+  background-color: rgba(117, 97, 87, 1);
+}
+
+.modal__button-minus:active::after {
+  background-color: rgba(117, 97, 87, 0.5);
+}
 
 .modal__button-plus::before,
 .modal__button-plus::after {
@@ -1387,12 +1473,28 @@ body {
   width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
-  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
 }
 
 .modal__button-plus::after {
-  transform: rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
 }
+
+.modal__button-plus:hover::before,
+.modal__button-plus:hover::after {
+  background-color: rgba(117, 97, 87, 1);
+}
+
+.modal__button-plus:focus::before,
+.modal__button-plus:focus::after {
+  background-color: rgba(117, 97, 87, 1);
+}
+
+.modal__button-plus:active::before,
+.modal__button-plus:active::after {
+  background-color: rgba(117, 97, 87, 0.5);
+}
+
 
 .modal__amount-input {
   width: 31px;
@@ -1402,6 +1504,7 @@ body {
   text-align: center;
   background-color: #F2F2F2;
   border: none;
+  appearance: none;
 }
 
 .modal__amount-input::placeholder {
