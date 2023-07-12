@@ -840,9 +840,9 @@ body {
   opacity: 0.6;
 }
 
-.filter__group-control-input:focus .filter__group-control-mark {
+.filter__group-control-input:focus + .filter__group-control-mark {
   outline: 3px solid #83B3D3;
-  outline-offset: 10px;
+  outline-offset: 1px;
 }
 
 .filter__group-control:active {
