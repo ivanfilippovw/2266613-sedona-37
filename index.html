@@ -138,7 +138,7 @@
           <p class="booking__visual-title">Заинтересовались?</p>
           <p class="booking__text">Укажите предполагаемые даты поездки,<br>
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="button booking__button">Поиск гостиницы в Седоне</button>
+          <button class="button booking__button" type="button">Поиск гостиницы в Седоне</button>
         </section>
         <!-- Subscription -->
         <section class="subscription subscription_background">
@@ -146,7 +146,7 @@
           <p class="subscription__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription__form" id="subscription__form" action="https://echo.htmlacademy.ru/">
             <label class="subscription__label">
-              <input class="subscription__input" type="email" name="email" placeholder="Ваш e-mail"
+              <input class="subscription__input" required type="email" name="email" placeholder="Ваш e-mail"
                 form="subscription__form" required>
             </label>
             <button class="button subscription__button" type="submit">Подписаться</button>
@@ -193,24 +193,23 @@
     <!-- style="display: none" -->
     <div class="modal-container" style="display: none">
       <div class="modal-authorization modal">
-        <button class="modal__button-close">
+        <button class="modal__button-close" type="button">
           <span class="visually-hidden">Закрыть</span>
           <span class="modal__button-cross"></span>
         </button>
         <section class="modal__content">
           <h1 class="modal__title">Поиск гостиницы в Седоне</h1>
-          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
-            <!-- <legend class="modal__form-title"></legend> -->
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <ul class="modal__list">
               <li class="modal__item">
                 <label class="modal__label" for="arrival-date">Дата Заезда:</label>
-                <input class="modal__input" type="text" name="arrival-date" id="arrival-date" placeholder="Укажите дату"
-                  value="27 апреля 2020">
+                <input class="modal__input" required type="text" name="arrival-date" id="arrival-date"
+                  placeholder="Укажите дату" value="27 апреля 2020">
                 <p class="modal__arrival-date-text">Мы не можем отправить вас в прошлое.</p>
               </li>
               <li class="modal__item">
                 <label class="modal__label" for="date-of-departure">Дата Выезда:</label>
-                <input class="modal__input" type="text" name="date-of-departure" id="date-of-departure"
+                <input class="modal__input" required type="text" name="date-of-departure" id="date-of-departure"
                   placeholder="Укажите дату" value="1 сентября 2023">
                 <p class="modal__date-of-departure-text">На эти даты есть свободные номера. Пока есть.</p>
               </li>
@@ -223,8 +222,8 @@
                       <button class="modal__amount-button modal__button-minus" type="button">
                         <span class="visually-hidden">Убрать взрослого</span>
                       </button>
-                      <input class="modal__amount-input" type="number" name="adults" id="adults" placeholder="0"
-                        value="2" min="0" max="30">
+                      <input class="modal__amount-input" required type="number" name="adults" id="adults"
+                        placeholder="0" value="2" min="0" max="30">
                       <button class="modal__amount-button modal__button-plus" type="button">
                         <span class="visually-hidden">Добавить взрослого</span>
                       </button>
@@ -252,8 +251,8 @@
                       <button class="modal__amount-button modal__button-minus" type="button">
                         <span class="visually-hidden">Убрать ребенка</span>
                       </button>
-                      <input class="modal__amount-input" type="number" name="children" id="children" placeholder="0"
-                        value="2" min="0" max="30">
+                      <input class="modal__amount-input" required type="number" name="children" id="children"
+                        placeholder="0" value="2" min="0" max="30">
                       <button class="modal__amount-button modal__button-plus" type="button">
                         <span class="visually-hidden">Добавить ребенка</span>
                       </button>

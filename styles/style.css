@@ -1365,6 +1365,7 @@ body {
 }
 
 .modal__title {
+  width: 522px;
   margin-top: 0;
   margin-bottom: 64px;
   font-size: 30px;
