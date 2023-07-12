@@ -3,21 +3,15 @@
 
   <head>
     <meta charset="utf-8">
-
     <link rel="stylesheet" href="./styles/style.css">
-
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png">
-
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
-
     <div class="shadow-container">
-
       <!-- Header -->
-
       <header class="main-header">
         <a class="main-header__logo" href="#">
           <img class="main-header__logo-img" src="./images/header/header-logo.svg" width="140" height="70"
@@ -42,21 +36,14 @@
               </a>
             </li>
             <li class="navigation__buttons-item">
-              <!-- <a class="navigation__buttons-link navigation__buttons-link_flex" href="#">
-                <span class="navigation__buttons-link-text">Хочу сюда!</span>
-              </a> -->
               <button class="button navigation__buttons-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
       </header>
-
       <!-- Main -->
-
       <main class="main-container">
-
         <!-- Hero-->
-
         <section class="hero">
           <h1 class="visually-hidden">Приветственная часть сайта о городе Седона</h1>
           <img class="hero__img-title-part-1" src="./images/hero-section/hero-sedona-title-welcome-part-1.svg"
@@ -73,9 +60,7 @@
           <h2 class="welcome__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="welcome__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </section>
-
         <!-- Advantages -->
-
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества города Седона</h2>
           <ul class="advantages__list">
@@ -147,9 +132,7 @@
             </li>
           </ul>
         </section>
-
         <!-- Booking -->
-
         <section class="booking">
           <h2 class="visually-hidden">Бронирование гостиниц</h2>
           <p class="booking__visual-title">Заинтересовались?</p>
@@ -157,9 +140,7 @@
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="button booking__button">Поиск гостиницы в Седоне</button>
         </section>
-
         <!-- Subscription -->
-
         <section class="subscription subscription_background">
           <h2 class="subscription__title">Подпишитесь на рассылку</h2>
           <p class="subscription__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -172,9 +153,7 @@
           </form>
         </section>
       </main>
-
       <!-- Footer -->
-
       <footer class="main-footer">
         <ul class="footer__list">
           <li class="footer__item">
@@ -210,6 +189,83 @@
           </svg>
         </a>
       </footer>
+    </div>
+    <!-- style="display: none" -->
+    <div class="modal-container">
+      <div class="modal-authorization modal">
+        <button class="modal__button-close">
+          <span class="visually-hidden">Закрыть</span>
+          <span class="modal__button-cross"></span>
+        </button>
+        <section class="modal__content">
+          <h1 class="modal__title">Поиск гостиницы в Седоне</h1>
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- <legend class="modal__form-title"></legend> -->
+            <ul class="modal__list">
+              <li class="modal__item">
+                <label class="modal__label" for="arrival-date">Дата Заезда:</label>
+                <input class="modal__input" type="text" name="arrival-date" id="arrival-date" placeholder="Укажите дату"
+                  value="27 апреля 2020">
+                <p class="modal__arrival-date-text">Мы не можем отправить вас в прошлое.</p>
+              </li>
+              <li class="modal__item">
+                <label class="modal__label" for="date-of-departure">Дата Выезда:</label>
+                <input class="modal__input" type="text" name="date-of-departure" id="date-of-departure"
+                  placeholder="Укажите дату" value="1 сентября 2023">
+                <p class="modal__date-of-departure-text">На эти даты есть свободные номера. Пока есть.</p>
+              </li>
+              <li class="modal__item">
+                <ul class="modal__amount-list">
+                  <li class="modal__amount-item">
+                    <label class="modal__label" for="adults">Взрослые:
+                    </label>
+                    <div class="modal__amount-wrapper">
+                      <button class="modal__amount-button modal__button-minus" type="button">
+                        <span class="visually-hidden">Убрать взрослого</span>
+                      </button>
+                      <input class="modal__amount-input" type="number" name="adults" id="adults" placeholder="0"
+                        value="2" min="0" max="30">
+                      <button class="modal__amount-button modal__button-plus" type="button">
+                        <span class="visually-hidden">Добавить взрослого</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="modal__amount-item">
+                    <span class="modal__label">
+                      <label class="modal__label" for="children">Дети:</label>
+                      <span class="tooltip">
+                        <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-label-date">
+                          <svg class="tooltip__icon" width="26" height="26" viewBox="0 0 26 26" fill=""
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                              fill="white" />
+                          </svg>
+                        </button>
+                        <span class="tooltip__text" role="tooltip" id="tooltip-label-date">Укажите количество детей,
+                          которые будут с вами,
+                          возраст которых от 6
+                          до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                      </span>
+                    </span>
+                    <div class="modal__amount-wrapper">
+                      <button class="modal__amount-button modal__button-minus" type="button">
+                        <span class="visually-hidden">Убрать ребенка</span>
+                      </button>
+                      <input class="modal__amount-input" type="number" name="children" id="children" placeholder="0"
+                        value="2" min="0" max="30">
+                      <button class="modal__amount-button modal__button-plus" type="button">
+                        <span class="visually-hidden">Добавить ребенка</span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button class="modal__button-find" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 

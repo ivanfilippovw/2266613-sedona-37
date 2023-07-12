@@ -3,21 +3,15 @@
 
   <head>
     <meta charset="utf-8">
-
     <link rel="stylesheet" href="./styles/style.css">
-
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png">
-
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
-
     <div class="shadow-container">
-
       <!-- Header -->
-
       <header class="main-header">
         <a class="main-header__logo" href="index.html">
           <img class="main-header__logo-img" src="./images/header/header-logo.svg" width="140" height="70"
@@ -42,21 +36,14 @@
               </a>
             </li>
             <li class="navigation__buttons-item">
-              <!-- <a class="navigation__buttons-link navigation__buttons-link_flex">
-                <span class="navigation__buttons-link-text">Хочу сюда!</span>
-              </a> -->
               <button class="button navigation__buttons-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
       </header>
-
       <!-- Main -->
-
       <main class="main-container">
-
         <!-- Filter -->
-
         <section class="filter">
           <h1 class="filter__title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -64,9 +51,7 @@
                   class="visually-hidden"></span></a></li>
             <li class="breadcrumbs__item"><span class="breadcrumbs__link-text">Гостиницы</span></li>
           </ul>
-
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
-
             <fieldset class="filter__group">
               <legend class="filter__group-title">Инфраструктура:</legend>
               <ul class="filter__group-list">
@@ -86,43 +71,57 @@
                 </li>
                 <li class="filter__group-item">
                   <label class="filter__group-control">
-                    <input class="visually-hidden filter__group__control-input" type="checkbox" name="wi-fi">
+                    <input class="visually-hidden filter__group-control-input" type="checkbox" name="wi-fi">
                     <span class="filter__group-control-mark"></span>
                     <span class="filter__group-control-label">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="filter__group">
               <legend class="filter__group-title">Тип Жилья:</legend>
-              <label class="filter__group-control">
-                <input class="filter__group-control-input" type="radio" name="housing" value="hotels" checked>
-                Гостиница
-              </label>
-              <label class="filter__group-control">
-                <input class="filter__group-control-input" type="radio" name="housing" value="motels">
-                Мотель
-              </label>
-              <label class="filter__group-control">
-                <input class="filter__group-control-input" type="radio" name="housing" value="apartments">
-                Апартаменты
-              </label>
+              <ul class="filter__group-list">
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group-control-input" type="radio" name="housing"
+                      value="hotels" checked>
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Гостиница</span>
+                  </label>
+                </li>
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group-control-input" type="radio" name="housing"
+                      value="motels">
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Мотель</span>
+                  </label>
+                </li>
+                <li class="filter__group-item">
+                  <label class="filter__group-control">
+                    <input class="visually-hidden filter__group-control-input" type="radio" name="housing"
+                      value="apartments">
+                    <span class="filter__group-control-mark"></span>
+                    <span class="filter__group-control-label">Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
-
             <fieldset class="filter__price-slider">
               <legend class="filter__price-slider-title">Стоимость, ₽:</legend>
               <div class="range">
                 <div class="range__inputs-wrapper">
                   <label class="filter__price-slider-label">
                     <input class="filter__price-slider-input" type="number" placeholder="от" value="0">
+                    <span>от</span>
                   </label>
                   <label class="filter__price-slider-label">
                     <input class="filter__price-slider-input" type="number" placeholder="до" value="9000">
+                    <span>до</span>
                   </label>
                 </div>
                 <div class="range__scale">
-                  <div class="range__bar" style="right:65px; width:226px">
+                  <div class="range__bar" style="right:60px; width:226px">
                     <button class="range-toggle toggle-min">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -133,18 +132,13 @@
                 </div>
               </div>
             </fieldset>
-
             <div class="filter__buttons-wrapper">
               <button class="filter__button-apply button" type="submit">Применить</button>
               <button class="filter__button-reset button" type="reset">Сбросить</button>
             </div>
-
           </form>
         </section>
-
         <!-- Catalog-->
-
-
         <section class="catalog">
           <div class="inner-wrapper">
             <h2 class="visually-hidden">Каталог гостиниц</h2>
@@ -183,7 +177,6 @@
                 </ul>
               </div>
             </div>
-
             <ul class="catalog__card-list">
               <li class="catalog__card-item card">
                 <a class="card__title-link" href="#">
@@ -206,7 +199,6 @@
                 </ul>
                 <p class="card__rating">Рейтинг:<span class="card__rating-score">8,5</span></p>
               </li>
-
               <li class="catalog__card-item card">
                 <a class="card__title-link" href="#">
                   <h3 class="card__title">Villas at Poco Diablo</h3>
@@ -293,9 +285,7 @@
             </ul>
           </div>
         </section>
-
         <!-- Subscription -->
-
         <section class="subscription">
           <h2 class="subscription__title">Подпишитесь на рассылку</h2>
           <p class="subscription__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -308,9 +298,7 @@
           </form>
         </section>
       </main>
-
       <!-- Footer -->
-
       <footer class="main-footer">
         <ul class="footer__list">
           <li class="footer__item">
