@@ -13,6 +13,7 @@
     <div class="shadow-container">
       <!-- Header -->
       <header class="main-header" data-test="header">
+        <h1 class="visually-hidden">Cайт о городе Седона</h1>
         <a class="main-header__logo" href="index.html">
           <img class="main-header__logo-img" src="./images/header/header-logo.svg" width="140" height="70"
             alt="Логотип сайта про город Седона." loading="lazy">
@@ -36,7 +37,7 @@
               </a>
             </li>
             <li class="navigation__buttons-item">
-              <button class="button navigation__buttons-button" type="button">Хочу сюда!</button>
+              <a class="button navigation__buttons-button-link" type="button">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -45,14 +46,14 @@
       <main class="main-container" data-test="main">
         <!-- Filter -->
         <section class="filter">
-          <h1 class="filter__title">Гостиницы Седоны</h1>
+          <h2 class="filter__title">Гостиницы Седоны</h2>
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html"><span
                   class="visually-hidden"></span></a></li>
             <li class="breadcrumbs__item"><span class="breadcrumbs__link-text">Гостиницы</span></li>
           </ul>
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
-            <div class="filter__form-wrapper filter__form-wrappe--flex-shrink">
+            <div class="filter__form-wrapper filter__form-wrapper--flex-shrink">
               <fieldset class="filter__group">
                 <legend class="filter__group-title">Инфраструктура:</legend>
                 <ul class="filter__group-list">
@@ -296,7 +297,7 @@
           <form class="subscription__form" id="subscription__form" action="https://echo.htmlacademy.ru/">
             <label class="subscription__label">
               <input class="subscription__input subscription__input_color" required type="email" name="email"
-                placeholder="Ваш e-mail" form="subscription__form" required>
+                placeholder="Ваш e-mail" form="subscription__form">
             </label>
             <button class="button subscription__button" type="submit">Подписаться</button>
           </form>
