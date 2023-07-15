@@ -1247,6 +1247,9 @@ body {
 }
 
 .catalog_theme-wrapper {
+  display: grid;
+  grid-template-columns: 292px auto;
+  gap: 50px;
   width: 522px;
 }
 
@@ -1295,6 +1298,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
 .catalog__theme-link {
@@ -1327,10 +1331,6 @@ body {
 
 .catalog__theme-link:active {
   border-color: #000000;
-}
-
-.catalog__theme-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .catalog-tile-style-icon,
