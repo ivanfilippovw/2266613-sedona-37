@@ -302,6 +302,7 @@ body {
 .navigation__buttons-button-link {
   font-weight: 700;
   text-align: center;
+  text-decoration: none;
 }
 
 /* index.html */
@@ -409,6 +410,10 @@ body {
           align-items: center;
   width: 400px;
   padding: 102px 85px;
+}
+
+.advantages__card-item:not(:first-child, :last-child) .advantages__card-wrapper {
+  padding-top: 113px;
 }
 
 .advantages__card-plus-wrapper {
@@ -615,6 +620,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   text-align: center;
+  text-decoration: none;
 }
 
 /* Subscription */
@@ -809,7 +815,6 @@ body {
 }
 
 .footer__phone {
-  /* padding: 20px; */
   font-size: 40px;
   line-height: 40px;
   color:#000000;
@@ -1247,7 +1252,9 @@ body {
 }
 
 .catalog_theme-wrapper {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 292px 50px auto;
   grid-template-columns: 292px auto;
   gap: 50px;
   width: 522px;
@@ -1297,7 +1304,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -1413,7 +1421,8 @@ body {
 
 .card__title-link {
   grid-column: 1 / -1;
-  align-self: start;
+  -ms-grid-row-align: start;
+      align-self: start;
   text-decoration: none;
   color: #000000;
 }
@@ -1565,7 +1574,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 10px;
   font-weight: 700;
   font-size: 20px;
